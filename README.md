@@ -2,6 +2,9 @@
   programmer: Clarisse Bonang 
 # Description 
 # Screenshot(s)
+Upon Opening: ![Page0](https://github.com/csbonang/bonang_PasswordGenerator/blob/main/screenshot0.PNG)
+Prompt User(the user is prompted on the other properties as well): ![Page1](https://github.com/csbonang/bonang_PasswordGenerator/blob/main/screenshot1.PNG)
+Password Generated: ![Page2](https://github.com/csbonang/bonang_PasswordGenerator/blob/main/screenshot2.PNG)
 # References 
 special characters 
 https://owasp.org/www-community/password-special-characters
