@@ -1,5 +1,5 @@
 # bonang_PasswordGenerator
-  programmer: Clarisse Bonang 
+  programmer: Clarisse Bonang <br> 
   deployed link: https://csbonang.github.io/bonang_PasswordGenerator/ 
 # Description 
   The program generates a password by meeting all requirements. 
