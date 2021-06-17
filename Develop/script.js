@@ -37,6 +37,15 @@ function generatePassword()
     passwordInfo.lowercase = confirm("Would you like your password to be lowercase? "); 
   // prompt for uppercase letter (confirm)
     passwordInfo.uppercase = confirm("Would you like your password to be uppercase? "); 
+  // check if user selected both upper and lower case, If so, prompt them again. 
+    while (passwordInfo.lowercase && passwordInfo.uppercase)
+    {
+      window.alert("You selected both upper and lower case. Please select one."); 
+      // prompt for lowercase letter (confirm )
+      passwordInfo.lowercase = confirm("Would you like your password to be lowercase? "); 
+      // prompt for uppercase letter (confirm)
+      passwordInfo.uppercase = confirm("Would you like your password to be uppercase? "); 
+    }
   // prompt user if they want to include a number.  
     passwordInfo.numbers = confirm("Would you like to include a number in your password?"); 
   // prompt for special characters 
@@ -260,6 +269,41 @@ function generatePassword()
       // print updated length 
         console.log("Updated password length: " + passwordInfo.passLength); 
     }
+    // TODO: if the user only selects one character type, then generate only that character type. 
+    else if(passwordInfo.lowercase || passwordInfo.uppercase || passwordInfo.numbers || passwordInfo.specialChar)
+    {
+      // if any of those properties are true, then generate any of those. 
+      if(passwordInfo.lowercase || passwordInfo.uppercase)
+      {
+        // generate a word  
+          password = generateWord(passwordInfo.passLength); 
+        // make word uppercase or lowercase 
+          if(passwordInfo.uppercase)
+          {
+            password = password.toUpperCase(); 
+          }
+          else 
+          {
+            password = password.toLowerCase(); 
+          }
+        // print updated password 
+          console.log("Updated password with word: " +  password); 
+      }
+      else if(passwordInfo.numbers)
+      {
+        // generate number
+          password = generateNumber(passwordInfo.passLength); 
+        // print updated password 
+          console.log("Updated password with number: " + password); 
+      }
+      else 
+      {
+        // generate a special character 
+          password = generateSpecialCharacter(passwordInfo.passLength); 
+        // print updated password 
+          console.log("Updated password with special character: " + password); 
+      }
+    }
     else 
     {
       window.alert("You did not select any character type"); 
@@ -279,11 +323,12 @@ function generateRandomNumber(passwordMax)
 function generateWord(passwordLength)
 {
    var word =""; 
-   var characters = 'abcdefghijklmnopqrstuvwxyz'; 
+   var characters = 'abcdefghijklmnopqrstuvwxyz';
+   var charLength = characters.length; 
    for(var i = 0; i < passwordLength; i++)
    {
      word += characters.charAt(Math.floor(Math.random() * 
-     passwordLength));
+     charLength));
    }
    return word; 
 }
@@ -291,10 +336,11 @@ function generateNumber(passwordLength)
 {
   var number =""; 
   var characters = '0123456789'; 
+  var charLength = characters.length; 
   for(var i = 0; i < passwordLength; i++)
   {
     number += characters.charAt(Math.floor(Math.random() * 
-    passwordLength));
+    charLength));
   }
   return number; 
 }
