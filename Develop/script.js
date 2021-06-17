@@ -59,6 +59,15 @@ function generatePassword()
         console.log("Random pass length within range: " + lengthRandom); 
       // generate a word  
         password = generateWord(lengthRandom); 
+      // make word uppercase or lowercase 
+        if(passwordInfo.uppercase)
+        {
+          password = password.toUpperCase(); 
+        }
+        else 
+        {
+          password = password.toLowerCase(); 
+        }
       // print updated password 
         console.log("Updated password with word: " +  password); 
       // update the length 
@@ -163,6 +172,15 @@ function generatePassword()
         console.log("Random pass length within range: " + lengthRandom); 
       // generate a word  
         password = generateWord(lengthRandom); 
+      // make word uppercase or lowercase 
+        if(passwordInfo.uppercase)
+        {
+          password = password.toUpperCase(); 
+        }
+        else 
+        {
+          password = password.toLowerCase(); 
+        }
       // print updated password 
         console.log("Updated password with word: " +  password); 
       // update the length 
@@ -206,6 +224,15 @@ function generatePassword()
         console.log("Random pass length within range: " + lengthRandom); 
       // generate a word  
         password = generateWord(lengthRandom); 
+       // make word uppercase or lowercase 
+       if(passwordInfo.uppercase)
+       {
+         password = password.toUpperCase(); 
+       }
+       else 
+       {
+         password = password.toLowerCase(); 
+       }
       // print updated password 
         console.log("Updated password with word: " +  password); 
       // update the length 
