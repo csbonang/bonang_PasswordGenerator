@@ -24,3 +24,7 @@ https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-j
 <br>
 make string uppercase/lowercase 
 https://www.w3schools.com/jsref/jsref_touppercase.asp
+<br>
+check if variable is a number 
+https://mkyong.com/javascript/check-if-variable-is-a-number-in-javascript/
+

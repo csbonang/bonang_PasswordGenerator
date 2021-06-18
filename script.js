@@ -25,6 +25,12 @@ function generatePassword()
   //===========PROMPT USER================================== 
   // prompt that user for password length (8-128)
     passwordInfo.passLength = window.prompt("Enter a password length between 8-128: ");
+    // check if the password is a number 
+    while (isNaN(passwordInfo.passLength)) 
+    {
+      window.alert("Password length is not a number")
+      passwordInfo.passLength = window.prompt("Enter a password length between 8-128: ");
+    }
   // check if password length is within the correct length 
     while (passwordInfo.passLength < 8 || passwordInfo.passLength > 128) 
     {
